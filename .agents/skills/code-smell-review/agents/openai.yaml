@@ -1,0 +1,4 @@
+interface:
+  display_name: "Code Smell Review"
+  short_description: "Reject known code smells before accepting changes"
+  default_prompt: "Use $code-smell-review for the current task and record the evidence required by the project workflow."

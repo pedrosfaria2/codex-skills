@@ -1,0 +1,4 @@
+interface:
+  display_name: "Systematic Debugging"
+  short_description: "Find demonstrated causes before changing behavior"
+  default_prompt: "Use $systematic-debugging for the current task and record the evidence required by the project workflow."

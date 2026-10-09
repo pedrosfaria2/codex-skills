@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pending Issues"
+  short_description: "Keep findings visible and actively resolve them"
+  default_prompt: "Use $pending-issues for the current task and record the evidence required by the project workflow."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Issue"
+  short_description: "Repair unsuitable rules at their source"
+  default_prompt: "Use $skill-issue for the current task and record the evidence required by the project workflow."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Authoring Tests"
+  short_description: "Write clear tests with independent behavioral oracles"
+  default_prompt: "Use $authoring-tests for the current task and record the evidence required by the project workflow."

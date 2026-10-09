@@ -1,0 +1,4 @@
+interface:
+  display_name: "Documentation"
+  short_description: "Keep documentation and comments precise and concise"
+  default_prompt: "Use $documentation for the current task and record the evidence required by the project workflow."

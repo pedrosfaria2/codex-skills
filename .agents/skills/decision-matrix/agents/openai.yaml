@@ -1,0 +1,4 @@
+interface:
+  display_name: "Decision Matrix"
+  short_description: "Research and score alternatives with fair evidence"
+  default_prompt: "Use $decision-matrix for the current task and record the evidence required by the project workflow."

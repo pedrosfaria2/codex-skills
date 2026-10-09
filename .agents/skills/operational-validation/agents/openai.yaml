@@ -1,0 +1,4 @@
+interface:
+  display_name: "Operational Validation"
+  short_description: "Exercise real deliverables before claiming readiness"
+  default_prompt: "Use $operational-validation for the current task and record the evidence required by the project workflow."
