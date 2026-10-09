@@ -47,6 +47,12 @@ record that fact and let the primary complete the same bounded work.
    Stage only that coherent task and its reports. Inspect the staged diff and
    whitespace. Confirm it is the candidate that passed; rerun affected checks
    after changes. Mark the task checked in the same atomic commit.
+   Before committing, apply the blocking
+   [security/dependency gate](../../security-dependency-review/SKILL.md) to the
+   final staged content, including reports and commit text. Record redacted
+   evidence; recheck after any content change. A missing or failed gate prevents
+   commit. Before any dependency/tool install or update, its provenance gate
+   must pass first; this applies throughout the task.
 6. Commit immediately with a short descriptive title and task ID in the body.
    Do not use Conventional Commit prefixes. If the commit fails, leave the task
    unchecked, record the failure, and resolve it before dependent implementation.

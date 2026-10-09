@@ -1,20 +1,22 @@
 # Reusable Codex workflow
 
 Copy `AGENTS.md`, `.agents/skills/`, and `codex-reports/` into a project root.
+Merge the supplied `.gitignore` rules into the destination ignore file.
 Merge existing instructions and reports; preserve existing work. Include the
 hidden `.agents` directory when copying. This README describes the kit itself.
 
 The kit covers planning, delegation, implementation, tests, debugging, decisions,
 review, documentation, operational validation, pending issues, and handoff.
-It selects no application stack. All reports start uninitialized, ready for the
-first task; they contain no invented checks or completed work.
+It selects no application stack. Reports include reusable structure and actual
+maintenance evidence. When copying into another project, initialize its scope
+and verification records; do not treat kit maintenance as destination checks.
 
 Before implementation, Codex inspects the destination and records actual
 commands, tool versions, scope, and Git capabilities in
 [the plan](codex-reports/PLAN.md). Add project-specific contracts to `AGENTS.md`.
 Keep workflow rules in the linked skills instead of duplicating them.
 
-[AGENTS.md](AGENTS.md) routes all nine skills.
+[AGENTS.md](AGENTS.md) routes all ten skills.
 [Continuity](codex-reports/CONTINUITY.md) is the resume entry point;
 [decisions](codex-reports/DECISIONS.md), [pending issues](codex-reports/PENDING.md),
 and [validation](codex-reports/VALIDATION.md) retain the evidence.

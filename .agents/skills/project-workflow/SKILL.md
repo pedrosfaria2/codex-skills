@@ -11,6 +11,10 @@ Read [AGENTS.md](../../../AGENTS.md), [the plan](../../../codex-reports/PLAN.md)
 Use [orchestration](references/orchestration.md) for task ownership and acceptance,
 and [verification](references/verification.md) to establish actual checks.
 
+Before every commit and before installing or updating dependencies/tools, apply
+[security-dependency-review](../security-dependency-review/SKILL.md). Verify
+provenance before execution; inspect the exact staged candidate before commit.
+
 ## Understand and plan
 
 1. Inspect the tree, manifests, scripts, CI, configuration, and current Git state.

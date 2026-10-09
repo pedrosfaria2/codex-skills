@@ -1,0 +1,4 @@
+interface:
+  display_name: "Secrets and Dependency Review"
+  short_description: "Block leaks and verify dependency provenance"
+  default_prompt: "Use $security-dependency-review before committing or installing dependencies, and record the blocking gate result."

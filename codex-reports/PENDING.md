@@ -1,18 +1,21 @@
 # Pending issues
 
-Status: unassessed. No findings have been recorded; this is not a clean bill of
-health. Review when resuming, after every commit, and when an issue remains open.
+Reviewed for TASK-001. No unresolved secret/provenance finding blocks this task.
 
-| ID | Status | Task / owner | Finding and impact | Next action | Evidence |
-| --- | --- | --- | --- | --- | --- |
+| ID | Status | Finding and impact | Next action |
+| --- | --- | --- | --- |
+| ISSUE-001 | Session capability unavailable | No exposed native control can compact the current session; durable handoff preserved | Recheck capabilities after each commit; use native compaction when exposed |
 
-## Finding details
+## ISSUE-001
 
-No entries yet. Use stable ISSUE IDs and record first observation, latest review,
-affected scope, attempted remedies and exact results, conditions for retry,
-and evidence required for resolution. Distinguish open, in progress, blocked,
-and resolved. Preserve closure evidence and the resolving task.
+The primary inspected the session's tool catalog. No current-session compaction
+mechanism is exposed. Writing this report is not compaction. This does not block
+instruction work or publication; no compaction is claimed.
 
-Keep future implementation work in [PLAN.md](PLAN.md). Reflect current blockers
-and next actions in [CONTINUITY.md](CONTINUITY.md). Logging an issue does not
-waive an acceptance gate or authorize unrelated work.
+## Future findings
+
+Use stable issue IDs with task/owner, first observation, latest review, impact,
+actual attempted remedies/results, next action, and closure evidence. Never
+copy secrets or private endpoints into this ledger. A pending entry cannot waive
+a failed security gate. Review every open item after each commit and mirror
+continuity impact in [CONTINUITY.md](CONTINUITY.md).

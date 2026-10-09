@@ -1,6 +1,6 @@
 # Decision register
 
-Status: uninitialized. No project choices or winners recorded.
+Status: no scored project choices. TASK-001 research is recorded below.
 Use [decision-matrix](../.agents/skills/decision-matrix/SKILL.md) before selection.
 
 ## Entry structure
@@ -37,3 +37,32 @@ scoring. This unscored template records no selection.
 ## Decisions
 
 None yet. Add the first entry only after establishing an actual project choice.
+
+
+## TASK-001 — Research for the requested security gate
+
+The user fixed the scope: a blocking secrets/infrastructure review and dependency
+provenance before installation. No new dependency, runtime architecture, or
+scanner implementation is selected; no scored technology choice is being made.
+Existing Git/search tools support the contextual review. A configured scanner
+must also run; the instructions do not claim that a regex search proves safety.
+
+Research performed 2026-10-08. Queries included
+`site.github.com/gitleaks/gitleaks README git staged redact dir scan`,
+`site:git-scm.com gitignore already tracked files`, and
+`site:docs.github.com dependencies trusted publisher provenance not guarantee secure`.
+
+- [Git ignore rules](https://git-scm.com/docs/gitignore): already tracked files
+  require explicit review; ignoring a filename does not remove its staged data.
+- [Git staged diff](https://git-scm.com/docs/git-diff): review the index rather
+  than substituting the working-tree content.
+- [Artifact attestations](https://docs.github.com/en/actions/concepts/security/artifact-attestations):
+  verify artifact provenance with the ecosystem's supported evidence.
+- [Gitleaks documentation](https://github.com/gitleaks/gitleaks/blob/master/README.md)
+  and [TruffleHog documentation](https://github.com/trufflesecurity/trufflehog/blob/main/docs/man/trufflehog.1):
+  established scanner approaches exist. Neither was installed or made a kit
+  dependency. Use redacted/offline detection when scanners are configured.
+
+These are protocol and tool references, not proof that any arbitrary package
+is trustworthy. Each actual install/update requires current package-specific
+provenance, integrity, and advisory evidence before execution.

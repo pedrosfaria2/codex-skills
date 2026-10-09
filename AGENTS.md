@@ -23,6 +23,7 @@ needed supporting references. These rules also apply to scripts and test code.
 | Write or review tests | [authoring-tests](.agents/skills/authoring-tests/SKILL.md) |
 | Investigate a failure or regression | [systematic-debugging](.agents/skills/systematic-debugging/SKILL.md) |
 | Choose between alternatives | [decision-matrix](.agents/skills/decision-matrix/SKILL.md) |
+| Before every commit or dependency/tool install/update | [security-dependency-review](.agents/skills/security-dependency-review/SKILL.md) |
 | Review code before acceptance | [code-smell-review](.agents/skills/code-smell-review/SKILL.md) |
 | Write or review prose, docstrings, or comments | [documentation](.agents/skills/documentation/SKILL.md) |
 | Exercise a runnable partial or final deliverable | [operational-validation](.agents/skills/operational-validation/SKILL.md) |
@@ -59,11 +60,22 @@ commit, including prose-only commits. For projects without a compilation step,
 run their real applicable checks and record why a build is inapplicable.
 Never create unrelated scaffolding to manufacture a passing build.
 
+Before every installation or update, pass the provenance gate in
+[security-dependency-review](.agents/skills/security-dependency-review/SKILL.md).
+This prerequisite applies to every installation instruction in these skills,
+including tools and temporary experiments. Unverified origin or unresolved
+applicable security findings block installation.
+
 Install required missing tools and dependencies through the appropriate existing
 package manager within the user's authorization; respect pins and permissions.
 Rerun the blocked check immediately. Record actual installation failures, not
 an unattempted installation as a blocker. Permission limits require a concrete
 request only when existing authorization and tools cannot resolve them.
+
+Every commit requires a PASS from the secrets/private-infrastructure and
+dependency gate on the exact staged candidate, including documentation and
+reports. A failed, unresolved, or unrun required check blocks commit and affected
+publication. Build/test success cannot substitute for this review.
 
 Accept one coherent task at a time. When Git applies, include its checked plan
 entry and handoff in an immediate atomic commit with a plain descriptive title.

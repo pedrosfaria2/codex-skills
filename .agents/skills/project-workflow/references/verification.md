@@ -7,7 +7,10 @@ actual commands and applicable versions in [PLAN.md](../../../../codex-reports/P
 Include formatting, linting, types, compilation, tests, supported configurations,
 and artifact checks as applicable. An omitted category needs a reason, not a
 fabricated pass. Use existing pinned tools and ordinary package managers.
-Install missing required dependencies within authorization and rerun immediately.
+Pass [dependency provenance](../../security-dependency-review/SKILL.md) before
+installing or updating anything. Then install verified required dependencies
+within authorization and rerun immediately. This prerequisite also applies to
+measurement tools and temporary experiments.
 
 For compiled projects, build the exact candidate before every commit, even when
 only prose changes. For interpreted code, validate syntax/types and behavior.
@@ -48,6 +51,10 @@ an explicit unavailable measurement; record evidence and keep any unsupported
 claim out of acceptance. Decision scores follow the stricter rules in
 [decision-matrix](../../decision-matrix/SKILL.md).
 Prose-only changes have no runtime performance to measure.
+
+Before every commit, run the blocking
+[secrets and dependency review](../../security-dependency-review/SKILL.md) on the
+exact staged candidate and record its result. Review reports and artifacts too.
 
 ## Review evidence
 
